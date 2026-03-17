@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@privy-io/node": "^0.6.2",
-    "@privy-io/react-auth": "^3.8.1",
+    "@privy-io/react-auth": "^3.17.0",
     "@tanstack/react-query": "^5.90.12",
     "motion": "^12.23.26",
     "next": "15.5.7",
