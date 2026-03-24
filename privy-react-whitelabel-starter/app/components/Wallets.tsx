@@ -51,6 +51,12 @@ export default function Wallets() {
    */
 
   useEffect(() => {
+    if (embeddedEthereumWallets.length > 0) {
+      setShowSmartWallet(true);
+    }
+  }, [embeddedEthereumWallets.length]);
+
+  useEffect(() => {
     if (pendingAction === 'Ethereum') {
       createEthereumWallet({createAdditional: true});
     } else if (pendingAction === 'Solana') {

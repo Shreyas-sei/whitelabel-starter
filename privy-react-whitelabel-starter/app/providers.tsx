@@ -17,6 +17,7 @@ export default function Providers({children}: {children: React.ReactNode}) {
         defaultChain: sei,
         embeddedWallets: {
           showWalletUIs: false,
+          createOnLogin: 'users-without-wallets',
         },
         mfa: {
           // Use custom UIs for MFA
