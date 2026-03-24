@@ -50,6 +50,14 @@ export default function Wallets() {
    * are updated with the user
    */
 
+  // Auto-create Ethereum wallet on login if user has none
+  useEffect(() => {
+    if (ready && authenticated && embeddedEthereumWallets.length === 0) {
+      createEthereumWallet();
+    }
+  }, [ready, authenticated]);
+
+  // Auto-show smart wallet once an embedded Ethereum wallet exists
   useEffect(() => {
     if (embeddedEthereumWallets.length > 0) {
       setShowSmartWallet(true);
